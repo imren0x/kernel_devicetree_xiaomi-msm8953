@@ -1,5 +1,6 @@
 #include "android.dtsi"
 #include "display.dtsi"
+#include "touchscreen.dtsi"
 #include "audio.dtsi"
 #include "pmic.dtsi"
 #include "misc.dtsi"
