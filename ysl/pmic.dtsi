@@ -1,3 +1,45 @@
+/* msm-pm8953 */
+&spmi_bus {
+	qcom,pm8953@0 {
+		qcom,power-on@800 {
+			qcom,store-hard-reset-reason;
+			qcom,pon_1 {
+				qcom,support-reset = <1>;
+				qcom,s1-timer = <4480>;
+				qcom,s2-timer = <2000>;
+				qcom,s2-type = <8>;
+			};
+
+			qcom,pon_3 {
+				qcom,pon-type = <3>;
+				qcom,pull-up = <1>;
+				qcom,support-reset = <1>;
+				qcom,s1-timer = <1352>;
+				qcom,s2-timer = <2000>;
+				qcom,s2-type = <1>;
+				qcom,use-bark;
+			};
+		};
+		/delete-node/ qcom,pm8953_typec@bf00;
+	};
+};
+
+&pm8953_vadc {
+	/delete-node/ chan@13;
+};
+
+&pm8953_vadc {
+chan@11 {
+		label = "case_therm";
+		qcom,ratiometric;
+		qcom,hw-settle-time = <200>;
+		qcom,pre-scaling = <1 1>;
+
+		qcom,iio-chan-type-override = "IIO_VOLTAGE";
+		qcom,scale-fn-type = <0>; // SCALE_DEFAULT
+	};
+};	
+
 /* msm-pmi8940 */
 &spmi_bus {
     qcom,pmi8940@2 {  
@@ -79,4 +121,23 @@
 	qcom,detect-dpdm-floating;
 	vbus_dwc3-supply = <&smbcharger_charger_otg>;
 	extcon = <&qpnp_smbcharger>;
+};
+
+&spmi_bus {
+	qcom,pmi8940@3 {
+		labibb: qpnp-labibb-regulator {
+			status = "ok";
+			ibb_regulator: qcom,ibb@dc00 {
+				qcom,qpnp-ibb-init-lcd-voltage = <5500000>;
+			};
+
+			lab_regulator: qcom,lab@de00 {
+				qcom,qpnp-lab-init-lcd-voltage = <5500000>;
+			};
+		};
+	};
+};
+
+&wled {
+	qcom,cabc;
 };
