@@ -23,3 +23,17 @@
 &i2c_5 {
 	qcom,disable-dma;
 };
+
+&thermal_zones {
+	case-therm-adc {
+		status = "disabled";
+	};
+
+	case-therm-step {
+		status = "disabled";
+	};
+
+	quiet-therm-step {
+		status = "disabled";
+	};
+};
