@@ -24,6 +24,16 @@
 	};
 };
 
+&pmi8950_vadc {
+	pcba_vadc {
+		label = "pcba_vadc";
+		reg = <VADC_P_MUX1_1_1>;
+		qcom,ratiometric;
+		qcom,hw-settle-time = <200>;
+		qcom,pre-scaling = <1 1>;
+	};
+};
+
 &spmi_bus {
 	qcom,pmi8950@2 {
 		pmi8950_mpps: mpps {

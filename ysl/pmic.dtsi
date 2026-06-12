@@ -29,8 +29,9 @@
 };
 
 &pm8953_vadc {
-chan@11 {
+	case_therm {
 		label = "case_therm";
+		reg = <VADC_P_MUX2_1_1>;
 		qcom,ratiometric;
 		qcom,hw-settle-time = <200>;
 		qcom,pre-scaling = <1 1>;
