@@ -119,3 +119,35 @@
 		};
 	};
 };
+
+&soc {
+	tlmm: pinctrl@1000000 {
+        pmx_ts_int_suspend {
+			synaptic_int_suspend: synaptic_int_suspend {
+				mux {
+					pins = "gpio65";
+					function = "gpio";
+				};
+				config {
+					pins = "gpio65";
+					drive-strength = <2>;
+					bias-pull-up;
+				};
+			};
+		};
+
+		pmx_ts_reset_suspend {
+			synaptic_reset_suspend: synaptic_reset_suspend {
+				mux {
+					pins = "gpio64";
+					function = "gpio";
+				};
+				config {
+					pins = "gpio64";
+					drive-strength = <2>;
+					bias-pull-up;
+				};
+			};
+		};
+    };
+};

@@ -1,0 +1,54 @@
+/* msm8953-pinctrl */
+&soc {
+	tlmm: pinctrl@1000000 {
+		smartpa_irq_active: smartpa_irq_active {
+			mux {
+				pins = "gpio87";
+				function = "gpio";
+			};
+			config {
+				pins = "gpio87";
+				drive-strength = <2>;
+				bias-pull-down;
+				input-enable;
+			};
+		};
+		pri-tlmm-lines {
+			pri_tlmm_lines_act: pri_tlmm_lines_act {
+				mux {
+					pins = "gpio88", "gpio91", "gpio93";
+				};
+				config {
+					pins = "gpio88", "gpio91", "gpio93";
+				};
+			};
+			pri_tlmm_lines_sus: pri_tlmm_lines_sus {
+				mux {
+					pins = "gpio88", "gpio91", "gpio93";
+				};
+				config {
+					pins = "gpio88", "gpio91", "gpio93";
+				};
+			};
+		};
+
+		tlmm_gpio_key {
+			gpio_key_active: gpio_key_active {
+				mux {
+					pins = "gpio85";
+				};
+				config {
+					pins = "gpio85";
+				};
+			};
+			gpio_key_suspend: gpio_key_suspend {
+				mux {
+					pins = "gpio85";
+				};
+				config {
+					pins = "gpio85";
+				};
+			};
+		};
+	};
+};
