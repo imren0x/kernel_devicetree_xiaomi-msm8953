@@ -1,2 +1,4 @@
 #include "android.dtsi"
 #include "display.dtsi"
+#include "pmic.dtsi"
+#include "battery.dtsi"
