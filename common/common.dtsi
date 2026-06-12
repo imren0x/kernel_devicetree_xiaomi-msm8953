@@ -1,3 +1,4 @@
+#include "ramoops.dtsi"
 #include "audio.dtsi"
 #include "leds.dtsi"
 #include "haptic.dtsi"
