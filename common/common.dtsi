@@ -1,1 +1,2 @@
+#include "audio.dtsi"
 #include "leds.dtsi"
