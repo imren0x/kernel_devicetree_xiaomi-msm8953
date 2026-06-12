@@ -5,6 +5,8 @@
 #include "msm8953-mtp.dtsi"
 #include "msm8953-pmi8940.dtsi"
 
+#include "common/fragments/delete-msm8953-camera-sensor-mtp.dtsi"
+
 / {
 	model = "Qualcomm Technologies, Inc. MSM8953 + PMI8940 MTP";
 	compatible = "qcom,msm8953-mtp", "qcom,msm8953", "qcom,mtp" "xiaomi,ysl";
