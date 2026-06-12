@@ -7,6 +7,7 @@
 #include "msm8953-mdss-panels.dtsi"
 
 #include "common/fragments/delete-msm8953-camera-sensor-qrd.dtsi"
+#include "common/common.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. E7 QRD SKU3";

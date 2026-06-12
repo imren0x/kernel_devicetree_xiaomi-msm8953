@@ -6,6 +6,7 @@
 #include "msm8953-pmi8940.dtsi"
 
 #include "common/fragments/delete-msm8953-camera-sensor-mtp.dtsi"
+#include "common/common.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. MSM8953 + PMI8940 MTP";
