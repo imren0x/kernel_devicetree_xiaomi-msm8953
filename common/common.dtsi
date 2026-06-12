@@ -1,5 +1,6 @@
 #include "ramoops.dtsi"
 #include "audio.dtsi"
+#include "regulator.dtsi"
 #include "display.dtsi"
 #include "leds.dtsi"
 #include "haptic.dtsi"
