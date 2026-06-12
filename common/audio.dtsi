@@ -3,6 +3,8 @@
 };
 
 &int_codec {
+    qcom,msm-mbhc-hphl-swh = <1>;
+	qcom,msm-mbhc-gnd-swh = <1>;
 	/delete-property/ asoc-wsa-codec-names;
 	/delete-property/ asoc-wsa-codec-prefixes;
 	/delete-property/ msm-vdd-wsa-switch-supply;
