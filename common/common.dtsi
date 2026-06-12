@@ -2,3 +2,4 @@
 #include "audio.dtsi"
 #include "leds.dtsi"
 #include "haptic.dtsi"
+#include "soc.dtsi"
