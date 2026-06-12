@@ -1,3 +1,4 @@
+#include "android.dtsi"
 #include "ramoops.dtsi"
 #include "audio.dtsi"
 #include "regulator.dtsi"
